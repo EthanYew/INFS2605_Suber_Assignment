@@ -1,0 +1,18 @@
+2017-05-08 18:14:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
+INSERT INTO Sample VALUES('Car', 'Job'); [42102-195]
+2017-05-08 18:14:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
+INSERT INTO Sample VALUES('Car', 'Job'); [42102-195]
+2017-05-08 18:14:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
+INSERT INTO Sample VALUES('Car', 'Job'); [42102-195]
+2017-05-08 18:15:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE SAMPLETABLE(CARS VARCHAR(50), PROFESSION VARCHAR(50) [*]"; expected "FOR, UNSIGNED, INVISIBLE, VISIBLE, NOT, NULL, AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE SampleTable(cars VARCHAR(50), profession VARCHAR(50) [42001-195]
+2017-05-08 18:17:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
+INSERT INTO Sample VALUES('Car', 'Job'); [42102-195]
+2017-05-08 18:25:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
+SELECT * FROM sample [42102-195]

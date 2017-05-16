@@ -1,6 +1,6 @@
-package assignment;
+package assignment.database;
 
-import assignment.Database;
+import assignment.database.Database;
 import java.sql.ResultSet;
 import java.sql.Statement;
 

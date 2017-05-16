@@ -16,3 +16,9 @@ INSERT INTO Sample VALUES('Car', 'Job'); [42102-195]
 2017-05-08 18:25:28 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "SAMPLE" not found; SQL statement:
 SELECT * FROM sample [42102-195]
+2017-05-15 19:24:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENTS" not found; SQL statement:
+SELECT * FROM students [42102-195]
+2017-05-15 19:25:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "STUDENTS" not found; SQL statement:
+SELECT * FROM students [42102-195]

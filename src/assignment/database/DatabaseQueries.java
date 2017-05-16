@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment;
+package assignment.database;
 
+import assignment.Student;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,10 +39,10 @@ public class DatabaseQueries {
                     String name = result.getString("name");
                     Double wam = result.getDouble("wam");
                     Student student = new Student(name, wam);
-                    Student.add(student);
+                    students.add(student);
                     
                 }
                 Database.closeConnection();
-                return stmt;
+                return students;
     }
 }

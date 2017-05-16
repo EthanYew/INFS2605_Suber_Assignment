@@ -5,6 +5,7 @@
  */
 package assignment;
 
+import assignment.database.DatabaseQueries;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -18,7 +19,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 /**
- *
+ * 
  * @author EthanYew
  */
 public class Main extends Application{
@@ -51,15 +52,15 @@ public class Main extends Application{
         
         nameColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
         
-        TableColumn<Student, Double> wamColumn = new TableColumn("WAM");
+        TableColumn<Student, String> wamColumn = new TableColumn("WAM");
         
         //when using tables don't use primitive type - i.e. double -> Double
         
-        wamColumn.setCellValueFactory(cellData -> new SimpleStringProperty( String.valueOf(cellData.getValue().getWam()) );
+        wamColumn.setCellValueFactory(cellData -> new SimpleStringProperty( String.valueOf(cellData.getValue().getWam())) );
         
-        MISSING GET COLUMN STATEMENTS HERE
         
-        tableView.getColumns()
+        
+        tableView.getColumns().addAll(nameColumn, wamColumn);
         
         pane.getChildren().add(tableView);
         Scene scene = new Scene(pane);
@@ -68,6 +69,6 @@ public class Main extends Application{
     }
     
     public static void main(String[] args) {
-        
+        launch(args);
     }
 }

@@ -30,7 +30,7 @@ public void start(Stage primaryStage) {
     WebEngine engine = browser.getEngine();
     String url = Assignment.class.getResource("/assignment/map.html").toExternalForm();
     engine.load(url);
-    
+        
     StackPane sp = new StackPane();
     sp.getChildren().add(browser);
     Scene root = new Scene(sp);

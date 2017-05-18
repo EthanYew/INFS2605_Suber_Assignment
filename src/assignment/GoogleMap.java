@@ -34,7 +34,7 @@ public class GoogleMap extends Parent {
     {
         webView = new WebView();
         webEngine = webView.getEngine();
-        webEngine.load(getClass().getResource("resources/map.html").toExternalForm());
+        webEngine.load(getClass().getResource("/assignment/map.html").toExternalForm());
         ready = false;
         webEngine.getLoadWorker().stateProperty().addListener(new ChangeListener<Worker.State>()
         {

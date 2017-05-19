@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="313.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication7.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="317.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: CIRCLE;">
+         <image>
+            <Image url="@../../../../../Pictures/googlemaps.PNG" />
+         </image>
+      </ImageView>
+      <Text layoutX="38.0" layoutY="93.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="WE HAVE A MATCH " wrappingWidth="249.0000047981739">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="label" layoutX="36.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="249.0" style="-fx-background-color: BLACK;" text="ACCEPT RIDE " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="108.0" fitWidth="108.0" layoutX="32.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/VictorZhang.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="108.0" fitWidth="111.0" layoutX="170.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/VictorZhang.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="35.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Victor Zhang" wrappingWidth="91.999995239079">
+         <font>
+            <Font size="16.0" />
+         </font></Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="183.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bruce Zhang" wrappingWidth="91.999995239079">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

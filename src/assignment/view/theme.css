@@ -13,6 +13,7 @@ and open the template in the editor.
 
 
 .root {
-     -fx-background-image: url(/assignment/resources/"ofertas_slide2_bg.jpg");
+     -fx-background-image: url("../resources/ofertas_slide2_bg.jpg");
+     
 }
 

@@ -1,109 +1,120 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-        html { height: 100% }
-        body { height: 100%; margin: 0; padding: 0 }
-        #map_canvas { height: 100% }
-    </style>
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMjULupyE-r6aQav8XtlIqlPVAArseWbQ&sensor=false">
-    </script>
-    <script type="text/javascript">
-        var map;
-        var marker;
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0 }
+            #map_canvas { height: 100% }
+        </style>
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMjULupyE-r6aQav8XtlIqlPVAArseWbQ&sensor=false">
+        </script>
+        <script type="text/javascript">
+            var map;
+            var marker;
 
-        function get_click_position(event){
+            function get_click_position(event){
             var location = event.latLng;
             var lat = location.lat();
             var lng = location.lng();
             setMarkerPosition(lat, lng);
             app.handle(lat, lng);
-        }
+            }
 
-        function setMarkerPosition(lat, lng) {
+            function setMarkerPosition(lat, lng) {
             var clickLatLng = new google.maps.LatLng(lat, lng);
             marker.setPosition(clickLatLng);
-        }
+            }
 
-        function startJumping(){
+            function startJumping(){
             marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
+            }
 
-        function stopJumping(){
+            function stopJumping(){
             marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
+            }
 
-        function setMapCenter(lat, lng) {
+            function setMapCenter(lat, lng) {
             var latlng = new google.maps.LatLng(lat, lng);
             map.setCenter(latlng);
-        }
+            }
 
-        function switchSatellite() {
+            function switchSatellite() {
             var mapOptions = {
-                mapTypeId: google.maps.MapTypeId.SATELLITE
+            mapTypeId: google.maps.MapTypeId.SATELLITE
             };
             map.setOptions(mapOptions);
             setLightMarkerIcon();
-        }
+            }
 
-        function switchRoadmap() {
+            function switchRoadmap() {
             var mapOptions = {
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+            mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             map.setOptions(mapOptions);
             setDarkMarkerIcon();
-        }
+            }
 
-        function switchHybrid() {
+            function switchHybrid() {
             var mapOptions = {
-                mapTypeId: google.maps.MapTypeId.HYBRID
+            mapTypeId: google.maps.MapTypeId.HYBRID
             };
             map.setOptions(mapOptions);
             setLightMarkerIcon();
-        }
+            }
 
-        function switchTerrain() {
+            function switchTerrain() {
             var mapOptions = {
-                mapTypeId: google.maps.MapTypeId.TERRAIN
+            mapTypeId: google.maps.MapTypeId.TERRAIN
             };
             map.setOptions(mapOptions);
             setDarkMarkerIcon();
-        }
+            }
 
-        function initialize() {
+            function initialize() {
             var defLatLng = new google.maps.LatLng(59.95632093391832, 30.309906005859375);
             var mapOptions = {
-                center: defLatLng,
-                zoom: 3,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                disableDefaultUI: true,
-                panControl: false
+            center: defLatLng,
+            zoom: 3,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            disableDefaultUI: true,
+            panControl: false
             };
             map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
             google.maps.event.addListener(map, 'click', get_click_position);
 
             marker = new google.maps.Marker({
-                position: defLatLng,
-                map: map,
-                icon: "img/Pin.png"
+            position: defLatLng,
+            map: map,
+            icon: "img/Pin.png"
             });
 
             app.handle(0, 0);
-        }
+            }
 
-        function setDarkMarkerIcon() {
+            function setDarkMarkerIcon() {
             marker.setIcon("img/Pin.png");
-        }
+            }
 
-        function setLightMarkerIcon() {
+            function setLightMarkerIcon() {
             marker.setIcon("img/Pin_s.png");
-        }
+            }
 
-    </script>
-</head>
-<body onload="initialize()">
-<div id="map_canvas" style="width:100%; height:100%"></div>
-</body>
+        </script>
+    </head>
+    <body onload="initialize()">
+        <div id="map_canvas" style="width:100%; height:100%">
+
+            <iframe
+                width="450"
+                height="250"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAMjULupyE-r6aQav8XtlIqlPVAArseWbQ&q=record+stores+in+Seattle" allowfullscreen>
+            </iframe>
+            
+            <button onClick="switchRoadMap()">Set Location</button>
+
+        </div>
+    </body>
 </html>

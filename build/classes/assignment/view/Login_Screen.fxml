@@ -36,17 +36,17 @@
                               <Image url="@../resources/UNSW%20logo.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="355.0" layoutY="367.0" text="Contact Us" textFill="WHITE" underline="true" />
-                        <Label layoutX="264.0" layoutY="367.0" text="Privacy Policy" textFill="WHITE" underline="true" />
-                        <Label layoutX="211.0" layoutY="367.0" text="FAQs" textFill="WHITE" underline="true" />
+                        <Label fx:id="label_contactUs" layoutX="355.0" layoutY="367.0" text="Contact Us" textFill="WHITE" underline="true" />
+                        <Label fx:id="lbl_privacyPolicy" layoutX="264.0" layoutY="367.0" text="Privacy Policy" textFill="WHITE" underline="true" />
+                        <Label fx:id="lbl_FAQS" layoutX="211.0" layoutY="367.0" text="FAQs" textFill="WHITE" underline="true" />
                         <Label layoutX="608.0" layoutY="18.0" text="Our Mission" textFill="WHITE" underline="true" />
-                        <Button layoutX="274.0" layoutY="244.0" mnemonicParsing="false" text="Sign In" />
-                        <Button fx:id="SignUp" layoutX="339.0" layoutY="325.0" mnemonicParsing="false" onAction="#SignUpButton" prefHeight="23.0" prefWidth="72.0" text="Sign Up">
+                        <Button fx:id="btn_signIn" layoutX="274.0" layoutY="244.0" mnemonicParsing="false" onAction="#goToHomePage" text="Sign In" />
+                        <Button fx:id="btn_signUp" layoutX="339.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToSignUpPage" prefHeight="23.0" prefWidth="72.0" text="Sign Up">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Label layoutX="203.0" layoutY="329.0" text="Dont have an Account?" textFill="WHITE" />
+                        <Label fx:id="lbl_dontHaveAccount" layoutX="203.0" layoutY="329.0" text="Dont have an Account?" textFill="WHITE" />
                      </children>
                   </AnchorPane>
               </items>

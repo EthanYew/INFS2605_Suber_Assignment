@@ -37,8 +37,19 @@ public class Login_ScreenController implements Initializable {
     private Label lbl_Forgotten_Password;
     @FXML
     private ImageView img_logo;
-    @FXML
     private Button SignUp;
+    @FXML
+    private Label label_contactUs;
+    @FXML
+    private Label lbl_privacyPolicy;
+    @FXML
+    private Label lbl_FAQS;
+    @FXML
+    private Button btn_signIn;
+    @FXML
+    private Button btn_signUp;
+    @FXML
+    private Label lbl_dontHaveAccount;
 
     /**
      * Initializes the controller class.
@@ -52,17 +63,27 @@ public class Login_ScreenController implements Initializable {
 //    bdhfgshd
 
     @FXML
-    private void SignUpButton(ActionEvent event) throws IOException {
+    private void goToHomePage(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
        
-        stage=(Stage) SignUp.getScene().getWindow();
+        stage=(Stage) btn_signIn.getScene().getWindow();
         root = FXMLLoader.load(getClass().getResource("Home_Page.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     
-    
+    @FXML
+    private void goToSignUpPage(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+       
+        stage=(Stage) btn_signUp.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Sign_up_page.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     
 }

@@ -11,6 +11,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -20,7 +22,15 @@ import javafx.scene.control.Button;
 public class SeekRideController implements Initializable {
 
     @FXML
-    private Button label;
+    private Text text_from;
+    @FXML
+    private Text txt_to;
+    @FXML
+    private Button btn_seekRide;
+    @FXML
+    private TextField tf_fromAddress;
+    @FXML
+    private TextField tf_toAddress;
 
     /**
      * Initializes the controller class.

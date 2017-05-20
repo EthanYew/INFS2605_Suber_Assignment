@@ -29,8 +29,6 @@ public class RegoFormDriverController implements Initializable {
     private Button label;
     @FXML
     private Button btn_cancel;
-    @FXML
-    private AnchorPane AnchorPane;
 
     /**
      * Initializes the controller class.

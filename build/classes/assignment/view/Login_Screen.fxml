@@ -41,12 +41,13 @@
                         <Label fx:id="lbl_FAQS" layoutX="211.0" layoutY="367.0" text="FAQs" textFill="WHITE" underline="true" />
                         <Label layoutX="608.0" layoutY="18.0" text="Our Mission" textFill="WHITE" underline="true" />
                         <Button fx:id="btn_signIn" layoutX="274.0" layoutY="244.0" mnemonicParsing="false" onAction="#goToHomePage" text="Sign In" />
-                        <Button fx:id="btn_signUp" layoutX="339.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToSignUpPage" prefHeight="23.0" prefWidth="72.0" text="Sign Up">
+                        <Button fx:id="btn_signUpDriver" layoutX="367.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToSignUpDriver" prefHeight="25.0" prefWidth="105.0" text="Sign up to drive">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Label fx:id="lbl_dontHaveAccount" layoutX="203.0" layoutY="329.0" text="Dont have an Account?" textFill="WHITE" />
+                        <Label fx:id="lbl_dontHaveAccount" layoutX="122.0" layoutY="329.0" text="Dont have an Account?" textFill="WHITE" />
+                        <Button fx:id="btn_rideWithSuber" layoutX="256.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToSignUpRider" text="Ride with Suber" />
                      </children>
                   </AnchorPane>
               </items>

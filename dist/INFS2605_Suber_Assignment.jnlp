@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="INFS2605_Suber_Assignment.jar" size="189037" download="eager" />
+    <jar href="INFS2605_Suber_Assignment.jar" size="211532" download="eager" />
     <jar href="lib\h2-1.4.195.jar" size="1820369" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
   </resources>

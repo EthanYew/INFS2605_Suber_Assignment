@@ -46,12 +46,12 @@ public class Login_ScreenController implements Initializable {
     private Label lbl_FAQS;
     @FXML
     private Button btn_signIn;
-    @FXML
     private Button btn_signUpDriver;
     @FXML
     private Label lbl_dontHaveAccount;
-    @FXML
     private Button btn_rideWithSuber;
+    @FXML
+    private Button btn_createAccount;
 
     /**
      * Initializes the controller class.
@@ -77,24 +77,12 @@ public class Login_ScreenController implements Initializable {
     }
     
     @FXML
-    private void goToSignUpDriver(ActionEvent event) throws IOException {
+    private void goToCreateAccount(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
        
-        stage=(Stage) btn_signUpDriver.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("RegoFormDriver.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    
-    @FXML
-    private void goToSignUpRider(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent root;
-       
-        stage=(Stage) btn_rideWithSuber.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("RegoFormRider.fxml"));
+        stage=(Stage) btn_createAccount.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("createAccount.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

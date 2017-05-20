@@ -40,7 +40,7 @@ public class RegoFormRiderController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
     }
-    
+
     @FXML
     private void goToLoginPage(ActionEvent event) throws IOException {
         Stage stage;
@@ -52,4 +52,5 @@ public class RegoFormRiderController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
 }

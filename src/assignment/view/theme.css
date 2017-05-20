@@ -27,3 +27,8 @@ and open the template in the editor.
      
 }
 
+.button{
+    -fx-background-color: BLACK;
+    color: white;
+}
+

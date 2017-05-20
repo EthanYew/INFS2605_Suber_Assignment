@@ -4,38 +4,37 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="313.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.RegoFormRiderController">
-   <children>
-      <ImageView fitHeight="447.0" fitWidth="317.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="417.0" layoutX="15.0" layoutY="13.0" stroke="#c9c9c99e" strokeType="INSIDE" width="291.0" />
-      <TextField layoutX="26.0" layoutY="87.0" prefHeight="25.0" prefWidth="217.0" promptText="Account Name " />
-      <Button fx:id="label" layoutX="33.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: BLACK;" text="Confirm" textAlignment="CENTER" textFill="WHITE">
+<!--<fx:root id="AnchorPane" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.RegoFormDriverController">-->
+<!--</fx:root>-->
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.RegoFormRiderController">
+    <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField layoutX="184.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="First Name" />
+      <TextField layoutX="184.0" layoutY="171.0" prefHeight="25.0" prefWidth="249.0" promptText="Email Address" />
+      <Button fx:id="label" layoutX="175.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="183.0" style="-fx-background-color: BLACK;" text="ADD BANK DETAILS" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="WHITE" layoutX="28.0" layoutY="52.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER FOR A RIDE" textAlignment="CENTER" wrappingWidth="260.1368713378906">
+      <Text fill="WHITE" layoutX="142.0" layoutY="55.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="BECOME A CORPORATE RIDER" wrappingWidth="354.1368103027344">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="26.0" layoutY="177.0" prefHeight="25.0" prefWidth="59.0" promptText="MM" />
-      <TextField layoutX="26.0" layoutY="131.0" prefHeight="25.0" prefWidth="217.0" promptText="Card Number" />
-      <TextField layoutX="99.0" layoutY="177.0" prefHeight="25.0" prefWidth="59.0" promptText="YY" />
-      <TextField layoutX="26.0" layoutY="222.0" prefHeight="25.0" prefWidth="131.0" promptText="CVV" />
-      <Text fill="WHITE" layoutX="23.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTE: A $20 Membership fee will automatically be deducted from your account after registration. " textAlignment="CENTER" wrappingWidth="275.328125">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Text>
-      <Button fx:id="btn_cancel" layoutX="194.0" layoutY="357.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="46.0" prefWidth="85.0" style="-fx-background-color: BLACK;" text="Cancel" textAlignment="CENTER" textFill="WHITE">
+      <TextField layoutX="317.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="Last Name" />
+      <TextField layoutX="184.0" layoutY="214.0" prefHeight="25.0" prefWidth="249.0" promptText="Mobile Number" />
+      <TextField layoutX="184.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="Country " />
+      <TextField layoutX="184.0" layoutY="132.0" prefHeight="25.0" prefWidth="249.0" promptText="Birth Date e.g. 12/12/1900" />
+      <TextField layoutX="319.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="City" />
+      <TextField layoutX="184.0" layoutY="259.0" prefHeight="25.0" prefWidth="249.0" promptText="Driver's Licence Number" />
+      <Button fx:id="btn_cancel" layoutX="366.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="46.0" prefWidth="89.0" style="-fx-background-color: BLACK;" text="CANCEL" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
    </children>
-</AnchorPane>
+   </AnchorPane>

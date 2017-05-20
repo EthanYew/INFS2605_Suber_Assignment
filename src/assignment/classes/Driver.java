@@ -15,6 +15,8 @@ public class Driver {
     private String name;
     private String carMake;
     private String carModel;
+    private String bsb;
+    private String accountNumber;
     
     //Constructor for "Driver"
     public Driver(String emailaddress, String password, String carMake, String carModel){
@@ -41,6 +43,14 @@ public class Driver {
         return this.carModel;
     }
     
+    public String getBsb(){
+        return this.bsb;
+    }
+    
+    public String getAccountNumber(){
+        return this.accountNumber;
+    }
+    
     //Setter methods for these attributes
     public void setEmailAddress(String emailaddress){
         this.emailaddress = emailaddress;
@@ -56,6 +66,14 @@ public class Driver {
     
     public void setCarModel(String carModel){
         this.carModel = carModel;
+    }
+    
+    public void setBsb(String bsb){
+        this.bsb = bsb;
+    }
+    
+    public void setAccountNumber(String accountNumber){
+        this.accountNumber = accountNumber;
     }
     
     //Other methods for the Driver class

@@ -28,7 +28,7 @@ public void start(Stage primaryStage) {
 
     WebView browser = new WebView();
     WebEngine engine = browser.getEngine();
-    String url = Assignment.class.getResource("/assignment/map.html").toExternalForm();
+    String url = Assignment.class.getResource("/assignment/placesAutocompleteDirections.html").toExternalForm();
     engine.load(url);
         
     StackPane sp = new StackPane();

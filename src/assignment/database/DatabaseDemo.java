@@ -24,7 +24,7 @@ public class DatabaseDemo {
         Statement stmt = Database.database.createStatement();
         
         //create and insert for student table
-//        stmt.execute("CREATE TABLE student(name VARCHAR(50), wam DOUBLE);");
+        //stmt.execute("CREATE TABLE student(name VARCHAR(50), wam DOUBLE);");
         
 
         

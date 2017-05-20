@@ -63,17 +63,27 @@ public class Login_ScreenController implements Initializable {
     
     //jkdhjsdfh
 //    bdhfgshd
+    static Stage classStage = new Stage();
     
+    
+    public void start(Stage primaryStage){
+        
+         classStage = primaryStage ;
+    }
+     
     @FXML
-    private void goToHomePage(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent root;
-       
-        stage=(Stage) btn_signIn.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("Home_Page.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void goToHomePage(ActionEvent event) throws IOException, Exception {
+//        Stage stage;
+//        Parent root;
+//       
+//        stage=(Stage) btn_signIn.getScene().getWindow();
+//        root = FXMLLoader.load(getClass().getResource("Home_Page.fxml"));
+//        Scene scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
+
+        mapRoute ctc = new mapRoute();
+        ctc.start(mapRoute.classStage);
     }
     
     @FXML

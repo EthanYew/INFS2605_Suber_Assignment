@@ -10,6 +10,7 @@ package assignment.classes;
  * @author AriSurfacePro
  */
 public class Driver {
+    private int driverid;
     private String emailaddress;
     private String password;
     private String name;
@@ -27,6 +28,9 @@ public class Driver {
     }
     
     //Getter methods to display these values
+    public int getDriverId(){
+        return this.driverid;
+    }
     public String getEmailAddress(){
         return this.emailaddress;
     }
@@ -52,6 +56,9 @@ public class Driver {
     }
     
     //Setter methods for these attributes
+    public void setDriverId(int driverId){
+        this.driverid = driverId;
+    }
     public void setEmailAddress(String emailaddress){
         this.emailaddress = emailaddress;
     }

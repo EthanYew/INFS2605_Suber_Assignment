@@ -33,7 +33,7 @@ public class Driver{
     }
     
     //Login 
-    public boolean Login() throws SQLException{
+    public boolean LoginDriver() throws SQLException{
         assignment.database.Database.openConnection();
         Statement stmt = Database.database.createStatement();
         ResultSet result = stmt.executeQuery("SELECT emailaddress FROM driver");

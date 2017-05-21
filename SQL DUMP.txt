@@ -1,0 +1,3 @@
+CREATE TABLE DRIVER (driverId INT, name VARCHAR(50), emailaddress VARCHAR(100), carMake VARCHAR(50), carModel VARCHAR(80), numberOfSeats INT, bsb INT, accountNo INT, PRIMARY KEY (driverId));
+CREATE TABLE RIDER (riderId INT, name VARCHAR(50), emailaddress VARCHAR(100), creditcardnumber INT, CVC INT, expiryDate DATE, nameOnCard VARCHAR(50), PRIMARY KEY (riderId));
+CREATE TABLE TRIP (tripId INT, driverId INT, riderId INT, tripDate DATE, cost INT, startLocation VARCHAR(100), endLocation VARCHAR(100), paymentStatus VARCHAR(15), PRIMARY KEY (tripID), FOREIGN KEY (riderId) REFERENCES RIDER(riderId), FOREIGN KEY (driverId) REFERENCES DRIVER(driverId));

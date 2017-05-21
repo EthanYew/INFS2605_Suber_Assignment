@@ -24,7 +24,7 @@ public class DatabaseDemo {
         Statement stmt = Database.database.createStatement();
         
         //create and insert for student table
-//        stmt.execute("CREATE TABLE student(name VARCHAR(50), wam DOUBLE);");
+        //stmt.execute("CREATE TABLE student(name VARCHAR(50), wam DOUBLE);");
         
 
         
@@ -40,28 +40,28 @@ public class DatabaseDemo {
         //stmt.execute("CREATE TABLE SampleTable(cars VARCHAR(50), profession VARCHAR(50))");
         //once create tbale statement run comment out
         //2. Insert values into table
+        stmt.execute("INSERT INTO RIDER (riderId, name, emailaddress, creditcardnumber, CVC, expiryDate, nameOnCard) VALUES (1, 'John Doe', 'john.doe@test.com', 1234567890123456, 123, 09/20, 'John Doe')");
 //        stmt.execute("INSERT INTO SampleTable VALUES('Car', 'Job');");
         //3. Update table
 //        int n = stmt.executeUpdate("UPDATE sampleTable SET cars = 'Ferrari' WHERE profession = 'Job'");
 //        System.out.println(n);
         //executeUpdate tells  u how many rows have been updated
         //when u query something - u get back a resultset
-        ResultSet result = stmt.executeQuery("SELECT * FROM sampleTable");
+        /*ResultSet result = stmt.executeQuery("SELECT * FROM sampleTable");
 
         System.out.println(result);
         while (result.next()) {
             String car = result.getString("cars");
             String jobs = result.getString("profession");
-            System.out.println(car + " | " + jobs);
+            System.out.println(car + " | " + jobs);*/
 
             //when u do results table query, reading from top left corner - goes left
             //when u return it its like a buffer, how many rows of info, how many columns
             //position tells u at what point in ur file is it reading it, -1 means hasn't started reading it
             //keyword to reading it 
             //get string - gets varchar and put into variable
+            Database.closeConnection();
         }
+        
 
-        Database.closeConnection();
-
-    }
 }

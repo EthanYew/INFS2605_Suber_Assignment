@@ -5,11 +5,16 @@
  */
 package assignment.classes;
 
+import assignment.database.Database;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author AriSurfacePro
  */
-public class Driver {
+public class Driver{
     private int driverid;
     private String emailaddress;
     private String password;
@@ -20,13 +25,28 @@ public class Driver {
     private String accountNumber;
     
     //Constructor for "Driver"
-    public Driver(String emailaddress, String password, String carMake, String carModel){
+    public Driver(String emailaddress, String password, String carMake, String carModel) throws SQLException{
         this.emailaddress = emailaddress;
         this.password = password;
         this.carMake = carMake;
         this.carModel = carModel;
     }
     
+    //Login 
+    public boolean Login() throws SQLException{
+        assignment.database.Database.openConnection();
+        Statement stmt = Database.database.createStatement();
+        ResultSet result = stmt.executeQuery("SELECT emailaddress FROM driver");
+        String resultEmailAddress = result.getString(emailaddress);
+        ResultSet result1 = stmt.executeQuery("SELECT password FROM driver");
+        String resultPassword = result.getString(password);
+        if(this.emailaddress == resultEmailAddress && this.password == resultPassword){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     //Getter methods to display these values
     public int getDriverId(){
         return this.driverid;

@@ -10,11 +10,14 @@ package assignment.classes;
  * @author AriSurfacePro
  */
 public class Driver {
+    private int driverid;
     private String emailaddress;
     private String password;
     private String name;
     private String carMake;
     private String carModel;
+    private String bsb;
+    private String accountNumber;
     
     //Constructor for "Driver"
     public Driver(String emailaddress, String password, String carMake, String carModel){
@@ -25,6 +28,9 @@ public class Driver {
     }
     
     //Getter methods to display these values
+    public int getDriverId(){
+        return this.driverid;
+    }
     public String getEmailAddress(){
         return this.emailaddress;
     }
@@ -41,7 +47,18 @@ public class Driver {
         return this.carModel;
     }
     
+    public String getBsb(){
+        return this.bsb;
+    }
+    
+    public String getAccountNumber(){
+        return this.accountNumber;
+    }
+    
     //Setter methods for these attributes
+    public void setDriverId(int driverId){
+        this.driverid = driverId;
+    }
     public void setEmailAddress(String emailaddress){
         this.emailaddress = emailaddress;
     }
@@ -56,6 +73,14 @@ public class Driver {
     
     public void setCarModel(String carModel){
         this.carModel = carModel;
+    }
+    
+    public void setBsb(String bsb){
+        this.bsb = bsb;
+    }
+    
+    public void setAccountNumber(String accountNumber){
+        this.accountNumber = accountNumber;
     }
     
     //Other methods for the Driver class

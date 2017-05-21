@@ -12,7 +12,7 @@
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
-        height: 100%;
+        height: 95%;
         margin: 0;
         padding: 0;
       }
@@ -62,7 +62,7 @@
   <body>
     <input id="origin-input" class="controls" type="text"
         placeholder="Enter an origin location">
-
+    
     <input id="destination-input" class="controls" type="text"
         placeholder="Enter a destination location">
 
@@ -93,7 +93,25 @@
 
         new AutocompleteDirectionsHandler(map);
       }
+      
+      
+      
+      var originPlaceIdJava;
+      
+      var destinationPlaceIdJava;
+      
+      function returnOriginPlaceId(){
+      
+                return originPlaceIdJava;
+            }
+            
+      function returnDestinationPlaceId(){
+                return destinationPlaceIdJava;
+            }
 
+            
+            
+            
        /**
         * @constructor
        */
@@ -148,8 +166,14 @@
           }
           if (mode === 'ORIG') {
             me.originPlaceId = place.place_id;
+            
+            originPlaceIdJava = place.place_id;
+            
           } else {
             me.destinationPlaceId = place.place_id;
+            
+            destinationPlaceIdJava = place.place_id;
+            
           }
           me.route();
         });

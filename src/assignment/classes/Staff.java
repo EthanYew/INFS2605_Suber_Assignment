@@ -5,6 +5,11 @@
  */
 package assignment.classes;
 
+import assignment.database.Database;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**
  *
  * @author victor
@@ -22,6 +27,20 @@ public class Staff {
         this.password = password;
     }
     
+    public boolean LoginStaff() throws SQLException{
+        assignment.database.Database.openConnection();
+        Statement stmt = Database.database.createStatement();
+        ResultSet result = stmt.executeQuery("SELECT emailaddress FROM staff");
+        String resultEmailAddress = result.getString(emailAddress);
+        ResultSet result1 = stmt.executeQuery("SELECT password FROM rider");
+        String resultPassword = result.getString(password);
+        if(this.emailAddress == resultEmailAddress && this.password == resultPassword){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public String getName() {
         return this.name;
     }

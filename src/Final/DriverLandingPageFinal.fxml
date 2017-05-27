@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.lynden.gmapsfx.GoogleMapView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,14 +11,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.DriverLandingPageFinalController">
    <children>
-      <ImageView fitHeight="444.0" fitWidth="600.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../../Pictures/googlemaps.PNG" />
-         </image>
-      </ImageView>
       <AnchorPane prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="250.0" />
             <Text fx:id="name1" layoutX="103.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.47012329101562">
                <font>
                   <Font size="22.0" />
@@ -65,7 +61,6 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="408.0" layoutX="279.0" layoutY="18.0" stroke="#c9c9c99e" strokeType="INSIDE" width="301.0" />
+      <GoogleMapView layoutX="249.0" prefHeight="444.0" prefWidth="551.0" />
    </children>
 </AnchorPane>

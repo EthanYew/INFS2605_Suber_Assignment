@@ -65,10 +65,10 @@ public class login_ScreenFinalController implements Initializable {
     @FXML
     boolean returnResult = false;
 
-    String loggedInEmail;
+    public static String loggedInEmail;
 
-    public void setReturnResult(boolean returnResult) {
-        this.returnResult = returnResult;
+    public static String getLoggedInEmail() {
+        return loggedInEmail;
     }
 
     /**
@@ -241,6 +241,7 @@ public class login_ScreenFinalController implements Initializable {
             if (resultDriver.next()) {
                 System.out.println("Driver found");
 //                returnResult = true;
+                loggedInEmail = email;
                 Database.closeConnection();
                 return true;
 
@@ -266,6 +267,7 @@ public class login_ScreenFinalController implements Initializable {
                 System.out.println("Rider found");
 //                returnResult = true;
                 Database.closeConnection();
+                loggedInEmail = emailAddress;
                 return true;
 
             }
@@ -288,6 +290,7 @@ public class login_ScreenFinalController implements Initializable {
                 System.out.println("Corporate Member found");
 //                returnResult = true;
                 Database.closeConnection();
+                loggedInEmail = emailAddress;
                 return true;
 
             }
@@ -297,30 +300,5 @@ public class login_ScreenFinalController implements Initializable {
         return false;
     }
 
-    /*private boolean clickLogin() throws SQLException {
-        PreparedStatement ps = null;
-        Database.openConnection();
-
-        try {
-            String user = username.getText();
-            ps = database.prepareStatement("SELECT emailAddress,password from public.rider WHERE emailAddress = ? and password = ?;");
-            //ps.setString(1, username.getText());
-            //ps.setString(2, password.getText());
-            //ResultSet result = ps.executeQuery();
-            //return true;
-        } catch (Exception e) {
-        } finally {
-            ps.setString(1, username.getText());
-            ps.setString(2, password.getText());
-            ResultSet result = ps.executeQuery();
-            if (result.equals(ps.executeQuery())) {
-                Database.closeConnection();
-                return true;
-            } else {
-                dontHaveAccount.setText("Invalid Username or Password");
-                Database.closeConnection();
-                return false;
-            }
-        }
-    }*/
+    
 }

@@ -18,7 +18,7 @@ public class MapSearchAddress extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/assignment/GMapsFX/MapSearchAddress.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/assignment/GMapsFX/displayTrip.fxml"));
         
         Scene scene = new Scene(root);
         

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="INFS2605_Suber_Assignment.jar" size="1345122" download="eager" />
+    <jar href="INFS2605_Suber_Assignment.jar" size="1349955" download="eager" />
     <jar href="lib\GMapsFX-2.12.1-SNAPSHOT-javadoc.jar" size="647130" download="eager" />
     <jar href="lib\GMapsFX-2.12.1-SNAPSHOT-sources.jar" size="180798" download="eager" />
     <jar href="lib\GMapsFX-2.12.1-SNAPSHOT.jar" size="3894345" download="eager" />
@@ -33,6 +33,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="INFS2605_Suber_Assignment" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="assignment.Assignment"  name="INFS2605_Suber_Assignment" />
+  <jfx:javafx-desc  width="800" height="600" main-class="Final.Final"  name="INFS2605_Suber_Assignment" />
   <update check="always"/>
 </jnlp>

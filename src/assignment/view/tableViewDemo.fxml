@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="assignment.view.TableViewDemoController">
+    <stylesheets>
+        <URL value="@theme.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tripTbl" layoutX="190.0" layoutY="84.0" prefHeight="200.0" prefWidth="314.0">
+        <columns>
+          <TableColumn fx:id="tripIDCol" prefWidth="75.0" text="TripID" />
+          <TableColumn fx:id="startLocCol" prefWidth="116.33331298828125" text="Starting Location" />
+            <TableColumn fx:id="endDestCol" prefWidth="121.0" text="Ending Destination" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

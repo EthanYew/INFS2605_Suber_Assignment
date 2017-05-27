@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.TripDoneCustomerFinalController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="623.0" layoutY="1.0" pickOnBounds="true" style="-fx-image: CIRCLE;">
+         <image>
+            <Image url="@../../../../../Pictures/googlemaps.PNG" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.21" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="46.0" layoutX="262.0" layoutY="17.0" stroke="WHITE" strokeType="INSIDE" width="333.0" />
+      <Text layoutX="263.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR LAST TRIP: $" textAlignment="CENTER" wrappingWidth="267.3170166015625">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="125.0" layoutX="265.0" layoutY="226.0" stroke="WHITE" strokeType="INSIDE" width="333.0" />
+      <Text layoutX="295.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RATE MY DRIVER " textAlignment="CENTER" wrappingWidth="290.98370361328125">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Button fx:id="done" layoutX="303.0" layoutY="384.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="276.0" style="-fx-background-color: BLACK;" text="DONE" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="3.0" prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutX="-3.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Button fx:id="favourites" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Favourites" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tripHistory" layoutY="181.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="151.0" style="-fx-background-color: BLACK;" text="Trip History " textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="myProfile" layoutX="11.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="My Profile" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="faqs" layoutX="11.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="contactUs" layoutX="10.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="signOut" layoutX="2.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Text layoutX="103.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <ImageView fx:id="profilePicture" fitHeight="107.0" fitWidth="144.0" layoutX="43.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assignment/resources/Uber%20Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="cost" alignment="CENTER" layoutX="531.0" layoutY="21.0" prefHeight="39.0" prefWidth="55.0" promptText="[cost]">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="radio1" layoutX="292.0" layoutY="304.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="74.0" text="1 (Worst)" />
+      <RadioButton fx:id="radio2" layoutX="374.0" layoutY="304.0" mnemonicParsing="false" text="2" />
+      <RadioButton fx:id="radio3" layoutX="418.0" layoutY="304.0" mnemonicParsing="false" text="3" />
+      <RadioButton fx:id="radio4" layoutX="461.0" layoutY="304.0" mnemonicParsing="false" text="4" />
+      <RadioButton fx:id="radio5" layoutX="504.0" layoutY="304.0" mnemonicParsing="false" text="5 (Best)" />
+      <ImageView fx:id="profilePicture1" fitHeight="107.0" fitWidth="144.0" layoutX="357.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assignment/resources/Generic%20Face%20Logo.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

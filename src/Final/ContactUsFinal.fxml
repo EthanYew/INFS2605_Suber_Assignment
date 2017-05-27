@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.ContactUsFinalController">
+   <children>
+      <ImageView fitHeight="444.0" fitWidth="600.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Pictures/googlemaps.PNG" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Button fx:id="signIn" layoutY="130.0" mnemonicParsing="false" onAction="#goToSignIn" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="createAccount" layoutX="12.0" layoutY="193.0" mnemonicParsing="false" onAction="#goToCreateAccount" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: BLACK;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="faqs" layoutX="16.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToFaqs" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="contactUs" layoutX="17.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="privacyPolicy" layoutX="13.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: BLACK;" text="Privacy Policy" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assignment/resources/Uber%20Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="408.0" layoutX="279.0" layoutY="18.0" stroke="#c9c9c99e" strokeType="INSIDE" width="301.0" />
+      <Text fill="WHITE" layoutX="305.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACT US" textAlignment="CENTER" wrappingWidth="248.99999701045454">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="214.0" fitWidth="335.0" layoutX="305.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assignment/resources/Contact%20Us%20Map.JPG" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="318.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="388.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 - 9 Buckingham St, Surry Hills" wrappingWidth="153.76574331521988">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="317.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="385.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contact@suber.com" wrappingWidth="153.76574331521988">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="317.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="385.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1300 SUBER" wrappingWidth="153.76574331521988">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

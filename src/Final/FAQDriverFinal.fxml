@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.FAQDriverFinalController">
+   <children>
+      <ImageView fitHeight="444.0" fitWidth="600.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Pictures/googlemaps.PNG" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Button fx:id="faqs" layoutX="24.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="contactUs" layoutX="19.0" layoutY="313.0" mnemonicParsing="false" onAction="#goToContactUs" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="18.0" layoutY="-17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assignment/resources/Uber%20Logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="signIn" layoutX="10.0" layoutY="144.0" mnemonicParsing="false" onAction="#goToSignIn" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="createAccount" layoutX="21.0" layoutY="195.0" mnemonicParsing="false" onAction="#goToCreateAccount" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: BLACK;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="privacyPolicy" layoutX="17.0" layoutY="373.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: BLACK;" text="Privacy Policy" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="408.0" layoutX="279.0" layoutY="18.0" stroke="#c9c9c99e" strokeType="INSIDE" width="301.0" />
+      <Text fill="WHITE" layoutX="305.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FAQS" textAlignment="CENTER" wrappingWidth="248.99999701045454">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q: How do I use Suber?" wrappingWidth="226.46875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Suber in the &quot;Contact Us&quot; section" wrappingWidth="275.0991173386574">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q: How can I see my old trips?" wrappingWidth="226.46875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Look at the Trip History Section" wrappingWidth="275.0991173386574">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q: How do I pay for my trips?" wrappingWidth="226.46875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="292.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It is automatically deducted from your nominated bank account" wrappingWidth="275.0991173386574">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

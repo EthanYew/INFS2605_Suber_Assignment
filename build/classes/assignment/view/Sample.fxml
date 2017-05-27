@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="assignment.view.SampleController">
+  <children>
+    <Button fx:id="button" layoutX="406.0" layoutY="365.0" onAction="#handleButtonAction" text="Add Row" />
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <TableView fx:id="tripTbl" layoutX="14.0" layoutY="14.0" prefHeight="334.0" prefWidth="470.0">
+      <columns>
+        <TableColumn fx:id="tripIdCol" prefWidth="75.0" text="Trip ID" />
+        <TableColumn fx:id="startLocationCol" prefWidth="137.66668701171875" text="Starting Location" />
+        <TableColumn fx:id="destinationCol" prefWidth="180.33331298828125" text="Destination" />
+        <TableColumn fx:id="favouriteCol" prefWidth="75.0" text="Favourite" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>

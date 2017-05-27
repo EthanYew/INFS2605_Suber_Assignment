@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.RegoFormRiderFinalController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="623.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" style="-fx-image: CIRCLE;">
+         <image>
+            <Image url="@../../../../../Pictures/googlemaps.PNG" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.21" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="417.0" layoutX="15.0" layoutY="13.0" stroke="#c9c9c99e" strokeType="INSIDE" width="598.0" />
+      <Button fx:id="returnToLogin" layoutX="168.0" layoutY="365.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="46.0" prefWidth="293.0" style="-fx-background-color: BLACK;" text="RETURN TO LOGIN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="89.0" layoutY="61.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="RIDER" textAlignment="CENTER" wrappingWidth="451.4701843261719">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Button fx:id="addBankingDetails" layoutX="166.0" layoutY="303.0" mnemonicParsing="false" onAction="#goToBankDetails" prefHeight="46.0" prefWidth="293.0" style="-fx-background-color: BLACK;" text="ADD BANKING DETAILS" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="name" layoutX="98.0" layoutY="88.0" prefHeight="25.0" prefWidth="428.0" promptText="Full Name" />
+      <TextField fx:id="emailAddress" layoutX="98.0" layoutY="146.0" prefHeight="25.0" prefWidth="267.0" promptText="Email Address " />
+      <TextField fx:id="password" layoutX="98.0" layoutY="203.0" prefHeight="25.0" prefWidth="205.0" promptText="Password" />
+      <TextField fx:id="mobilePhoneNumber" layoutX="98.0" layoutY="255.0" prefHeight="25.0" prefWidth="205.0" promptText="Mobile Number" />
+   </children>
+</AnchorPane>

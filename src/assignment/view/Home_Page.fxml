@@ -11,10 +11,7 @@
     </stylesheets>
    <children>
       <TableView fx:id="driverTbl" layoutX="140.0" layoutY="100.0" prefHeight="200.0" prefWidth="320.0">
-        <columns>
-          <TableColumn fx:id="nameCol" prefWidth="132.99996948242188" text="name" />
-          <TableColumn fx:id="emailCol" prefWidth="137.33331298828125" text="email" />
-        </columns>
+        
       </TableView>
    </children>
 </AnchorPane>

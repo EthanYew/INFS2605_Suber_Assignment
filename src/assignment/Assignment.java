@@ -19,7 +19,7 @@ public class Assignment extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/assignment/view/Login_Screen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Final/loginScreenFinal.fxml"));
 
         Scene scene = new Scene(root);
         

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.MyProfileDriverCarFinal1Controller">
+   <children>
+      <ImageView fitHeight="444.0" fitWidth="600.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../Pictures/googlemaps.PNG" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutX="-3.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
+            <Text fx:id="name1" layoutX="103.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.47012329101562">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="favourites" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#goToFavourites" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Favourites" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="tripHistory" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#goToTripHistory" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Trip History " textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="myProfile" layoutX="12.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="My Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="faqs" layoutX="15.0" layoutY="282.0" mnemonicParsing="false" onAction="#goToFaqs" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="contactUs" layoutX="17.0" layoutY="328.0" mnemonicParsing="false" onAction="#goToContactUs" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="signOut" layoutX="10.0" layoutY="376.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Text fx:id="userType" layoutX="105.0" layoutY="78.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="131.47012329101562">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="logo" fitHeight="89.0" fitWidth="89.0" layoutX="8.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assignment/resources/Uber%20Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="408.0" layoutX="279.0" layoutY="18.0" stroke="#c9c9c99e" strokeType="INSIDE" width="301.0" />
+      <Button fx:id="update" layoutX="463.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="UPDATE" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="carModel" layoutX="291.0" layoutY="241.0" prefHeight="25.0" prefWidth="190.0" promptText="Car Model" />
+      <TextField fx:id="carModelYear" layoutX="291.0" layoutY="163.0" prefHeight="25.0" prefWidth="111.0" promptText="Car Model Year" />
+      <TextField fx:id="carMake" layoutX="291.0" layoutY="202.0" prefHeight="25.0" prefWidth="177.0" promptText="Car Make" />
+      <TextField fx:id="carRegistrationNumber" layoutX="291.0" layoutY="123.0" prefHeight="25.0" prefWidth="177.0" promptText="Car Registration Number" />
+      <Text fill="WHITE" layoutX="304.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAR PROFILE" textAlignment="CENTER" wrappingWidth="248.99999701045454">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="carInsuranceNumber" layoutX="291.0" layoutY="314.0" prefHeight="25.0" prefWidth="168.0" promptText="Car Insurance Policy Number" />
+      <Label fx:id="emailAddress" layoutX="291.0" layoutY="89.0" prefHeight="17.0" prefWidth="267.0" text="Email Address" />
+      <TextField fx:id="numberOfSeats" layoutX="291.0" layoutY="278.0" prefHeight="25.0" prefWidth="103.0" promptText="Number of Seats" />
+      <Button fx:id="back" layoutX="321.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToBackPage" prefHeight="39.0" prefWidth="215.0" style="-fx-background-color: BLACK;" text="BACK" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.SuberAccountTypeFinalController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="623.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" style="-fx-image: CIRCLE;">
+         <image>
+            <Image url="@../../../../../Pictures/googlemaps.PNG" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="0.21" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="421.0" layoutX="15.0" layoutY="13.0" stroke="#c9c9c99e" strokeType="INSIDE" width="600.0" />
+      <Button fx:id="backToLogin" layoutX="162.0" layoutY="354.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="46.0" prefWidth="324.0" style="-fx-background-color: BLACK;" text="BACK TO LOGIN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="93.0" layoutY="80.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="CHOOSE ACCOUNT TYPE" wrappingWidth="439.3034973144531">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Button fx:id="rider" layoutX="187.0" layoutY="109.0" mnemonicParsing="false" onAction="#goToCreateRider" prefHeight="46.0" prefWidth="268.0" style="-fx-background-color: BLACK;" text="RIDER " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="corporateRider" layoutX="187.0" layoutY="184.0" mnemonicParsing="false" onAction="#goToCreateCorporateRider" prefHeight="46.0" prefWidth="268.0" style="-fx-background-color: BLACK;" text="CORPORATE RIDER" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="driver" layoutX="187.0" layoutY="255.0" mnemonicParsing="false" onAction="#goToCreateDriver" prefHeight="46.0" prefWidth="268.0" style="-fx-background-color: BLACK;" text="DRIVER" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

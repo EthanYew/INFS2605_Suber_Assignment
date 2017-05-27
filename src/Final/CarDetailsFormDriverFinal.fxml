@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.CarDetailsFormDriverFinalController">
+   <children>
+      <ImageView fitHeight="434.0" fitWidth="596.0" layoutX="2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../Pictures/googlemaps.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="423.0" layoutX="8.0" layoutY="6.0" stroke="#c9c9c99e" strokeType="INSIDE" width="585.0" />
+      <Button fx:id="returnToLogin" layoutX="319.0" layoutY="351.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="46.0" prefWidth="249.0" style="-fx-background-color: BLACK;" text="RETURN TO LOGIN" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="168.0" layoutY="69.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="DRIVER CAR DETAILS" textAlignment="CENTER" wrappingWidth="322.1368713378906">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="carMake" layoutX="178.0" layoutY="149.0" prefHeight="25.0" prefWidth="121.0" promptText="Car Make" />
+      <TextField fx:id="carYear" layoutX="38.0" layoutY="149.0" prefHeight="25.0" prefWidth="121.0" promptText="Car Year" />
+      <TextField fx:id="carModel" layoutX="319.0" layoutY="149.0" prefHeight="25.0" prefWidth="226.0" promptText="Car Model" />
+      <Text fill="WHITE" layoutX="178.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOTE: A $20 Membership fee will automatically be deducted from your account after registration. " wrappingWidth="281.0000091791153">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField fx:id="licenseNumber" layoutX="37.0" layoutY="99.0" prefHeight="25.0" prefWidth="281.0" promptText="License Number" />
+      <Button fx:id="confirm" layoutX="35.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="249.0" style="-fx-background-color: BLACK;" text="CONFIRM " textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="carRegistrationNumber" layoutX="179.0" layoutY="199.0" prefHeight="25.0" prefWidth="205.0" promptText="Car Registration Number" />
+      <TextField fx:id="numberOfSeats" layoutX="38.0" layoutY="199.0" prefHeight="25.0" prefWidth="121.0" promptText="# of Seats" />
+      <TextField fx:id="carInsurancePolicyNumber" layoutX="38.0" layoutY="250.0" prefHeight="25.0" prefWidth="281.0" promptText="Car Insurance Policy Number" />
+   </children>
+</AnchorPane>

@@ -5,6 +5,8 @@
  */
 package assignment.classes;
 
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  *
  * @author AriSurfacePro
@@ -14,6 +16,33 @@ public class Driver {
     private String emailaddress;
     private String password;
     private String name;
+    
+    public SimpleStringProperty nameProperty;
+    public SimpleStringProperty email;
+
+    public int getDriverid() {
+        return driverid;
+    }
+
+    public void setDriverid(int driverid) {
+        this.driverid = driverid;
+    }
+
+    public String getEmailaddress() {
+        return emailaddress;
+    }
+
+    public void setEmailaddress(String emailaddress) {
+        this.emailaddress = emailaddress;
+    }
+
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
     private String carMake;
     private String carModel;
     private String bsb;

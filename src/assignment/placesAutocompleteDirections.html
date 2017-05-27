@@ -94,7 +94,11 @@
         new AutocompleteDirectionsHandler(map);
       }
       
+      var latLngJava; 
       
+      function returnLatLngOriginJava(){
+        return latLngJava;
+        }
       
       var originPlaceIdJava;
       
@@ -168,6 +172,9 @@
             me.originPlaceId = place.place_id;
             
             originPlaceIdJava = place.place_id;
+            
+            latLngJava = place.geometry.location.lat().toString();
+            console.log(latLngJava);
             
           } else {
             me.destinationPlaceId = place.place_id;

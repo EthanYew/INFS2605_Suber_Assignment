@@ -14,8 +14,8 @@
    <children>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="598.0">
          <children>
-            <PasswordField fx:id="pwf_Password" alignment="CENTER" layoutX="225.0" layoutY="204.0" text="Password" />
-            <TextField id="tf_Username" fx:id="tf_Username" alignment="CENTER" layoutX="225.0" layoutY="169.0" text="Username">
+            <PasswordField fx:id="pwfPassword" alignment="CENTER" layoutX="225.0" layoutY="204.0" text="Password" />
+            <TextField id="tf_Username" fx:id="tfEmail" alignment="CENTER" layoutX="225.0" layoutY="169.0" promptText="Email">
                <font>
                   <Font name="SansSerif Regular" size="12.0" />
                </font>

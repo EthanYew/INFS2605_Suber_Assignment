@@ -42,7 +42,7 @@ public class DatabaseDemo {
         //once create tbale statement run comment out
         
         //2. Insert values into table
-//        stmt.execute("INSERT INTO SampleTable VALUES('Car', 'Job');");
+//        stmt.execute("INSERT INTO ajay VALUES('ari', '4');");
 
         //3. Update table
 //        int n = stmt.executeUpdate("UPDATE sampleTable SET cars = 'Ferrari' WHERE profession = 'Job'");
@@ -50,12 +50,14 @@ public class DatabaseDemo {
        
         //executeUpdate tells  u how many rows have been updated
         //when u query something - u get back a resultset
-        ResultSet result = stmt.executeQuery("SELECT * FROM sampleTable");
-
-        System.out.println(result);
+        ResultSet result = stmt.executeQuery("SELECT * FROM ajay");
+        
+        
+        
+        System.out.println(result.getRow());
         while (result.next()) {
-            String car = result.getString("cars");
-            String jobs = result.getString("profession");
+            String car = result.getString("name");
+            double jobs = result.getDouble("wam");
             System.out.println(car + " | " + jobs);
 
             //when u do results table query, reading from top left corner - goes left

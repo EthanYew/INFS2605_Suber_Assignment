@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.web.WebView?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.Home_PageController">
     <stylesheets>
         <URL value="@theme.css" />
     </stylesheets>
    <children>
-      <WebView id="webView" fx:id="webView" layoutX="97.0" layoutY="41.0" prefHeight="299.0" prefWidth="406.0" />
+      <TableView fx:id="driverTbl" layoutX="140.0" layoutY="100.0" prefHeight="200.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="132.99996948242188" text="name" />
+          <TableColumn fx:id="emailCol" prefWidth="137.33331298828125" text="email" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

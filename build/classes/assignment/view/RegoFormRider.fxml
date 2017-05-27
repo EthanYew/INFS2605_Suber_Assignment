@@ -13,9 +13,9 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@theme.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.RegoFormRiderController">
     <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField layoutX="184.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="First Name" />
-      <TextField layoutX="184.0" layoutY="171.0" prefHeight="25.0" prefWidth="249.0" promptText="Email Address" />
-      <Button fx:id="label" layoutX="175.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="183.0" style="-fx-background-color: BLACK;" text="ADD BANK DETAILS" textAlignment="CENTER" textFill="WHITE">
+      <TextField fx:id="corporateId" layoutX="184.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="First Name" text="corporateId" />
+      <TextField fx:id="email" layoutX="184.0" layoutY="171.0" prefHeight="25.0" prefWidth="249.0" promptText="Email Address" text="email" />
+      <Button fx:id="addBankDetails" layoutX="175.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="183.0" style="-fx-background-color: BLACK;" text="ADD BANK DETAILS" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -25,12 +25,12 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="317.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="Last Name" />
-      <TextField layoutX="184.0" layoutY="214.0" prefHeight="25.0" prefWidth="249.0" promptText="Mobile Number" />
-      <TextField layoutX="184.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="Country " />
-      <TextField layoutX="184.0" layoutY="132.0" prefHeight="25.0" prefWidth="249.0" promptText="Birth Date e.g. 12/12/1900" />
-      <TextField layoutX="319.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="City" />
-      <TextField layoutX="184.0" layoutY="259.0" prefHeight="25.0" prefWidth="249.0" promptText="Driver's Licence Number" />
+      <TextField fx:id="name" layoutX="317.0" layoutY="88.0" prefHeight="25.0" prefWidth="118.0" promptText="Last Name" text="name" />
+      <TextField fx:id="companyName" layoutX="184.0" layoutY="214.0" prefHeight="25.0" prefWidth="249.0" promptText="Mobile Number" text="companyName" />
+      <TextField fx:id="country" layoutX="184.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="Country " />
+      <TextField fx:id="password" layoutX="184.0" layoutY="132.0" prefHeight="25.0" prefWidth="249.0" promptText="Birth Date e.g. 12/12/1900" text="password" />
+      <TextField fx:id="city" layoutX="319.0" layoutY="302.0" prefHeight="25.0" prefWidth="118.0" promptText="City" />
+      <TextField fx:id="contactNumber" layoutX="184.0" layoutY="259.0" prefHeight="25.0" prefWidth="249.0" promptText="Driver's Licence Number" text="contactNumber" />
       <Button fx:id="btn_cancel" layoutX="366.0" layoutY="340.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="46.0" prefWidth="89.0" style="-fx-background-color: BLACK;" text="CANCEL" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />

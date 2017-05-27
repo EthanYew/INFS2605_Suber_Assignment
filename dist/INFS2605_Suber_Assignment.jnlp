@@ -8,10 +8,27 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="INFS2605_Suber_Assignment.jar" size="1016734" download="eager" />
+    <jar href="INFS2605_Suber_Assignment.jar" size="1033099" download="eager" />
+    <jar href="lib\GMapsFX-2.12.1-SNAPSHOT-javadoc.jar" size="647130" download="eager" />
+    <jar href="lib\GMapsFX-2.12.1-SNAPSHOT-sources.jar" size="180798" download="eager" />
+    <jar href="lib\GMapsFX-2.12.1-SNAPSHOT.jar" size="3894345" download="eager" />
     <jar href="lib\h2-1.4.195.jar" size="1820369" download="eager" />
     <jar href="lib\h2-1.4.195__1_.jar" size="1820369" download="eager" />
-    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\jcl-over-slf4j-1.7.25-sources.jar" size="23239" download="eager" />
+    <jar href="lib\jcl-over-slf4j-1.7.25.jar" size="16515" download="eager" />
+    <jar href="lib\jul-to-slf4j-1.7.25-sources.jar" size="4872" download="eager" />
+    <jar href="lib\jul-to-slf4j-1.7.25.jar" size="4596" download="eager" />
+    <jar href="lib\log4j-over-slf4j-1.7.25-sources.jar" size="30870" download="eager" />
+    <jar href="lib\log4j-over-slf4j-1.7.25.jar" size="23645" download="eager" />
+    <jar href="lib\osgi-over-slf4j-1.7.25-sources.jar" size="5807" download="eager" />
+    <jar href="lib\osgi-over-slf4j-1.7.25.jar" size="5478" download="eager" />
+    <jar href="lib\slf4j-api-1.7.25-sources.jar" size="55539" download="eager" />
+    <jar href="lib\slf4j-api-1.7.25.jar" size="41203" download="eager" />
+    <jar href="lib\slf4j-ext-1.7.25-sources.jar" size="43520" download="eager" />
+    <jar href="lib\slf4j-ext-1.7.25.jar" size="42377" download="eager" />
+    <jar href="lib\slf4j-migrator-1.7.25.jar" size="28664" download="eager" />
+    <jar href="lib\slf4j-simple-1.7.25-sources.jar" size="13815" download="eager" />
+    <jar href="lib\slf4j-simple-1.7.25.jar" size="15257" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="INFS2605_Suber_Assignment" >
     <param name="requiredFXVersion" value="8.0+"/>

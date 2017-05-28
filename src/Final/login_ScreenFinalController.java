@@ -181,7 +181,7 @@ public class login_ScreenFinalController implements Initializable {
             emailAddress.clear();
 
             stage = (Stage) signIn.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("/Final/finalAdditions/RiderLandingPageMap.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/Final/DriverLandingPageFinal.fxml"));
 
             Scene scene = new Scene(root);
             stage.setScene(scene);

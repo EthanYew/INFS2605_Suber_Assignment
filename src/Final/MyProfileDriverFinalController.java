@@ -5,8 +5,13 @@
  */
 package Final;
 
+import assignment.database.Database;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -67,13 +72,27 @@ public class MyProfileDriverFinalController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        try {
+            assignment.database.Database.openConnection();
+            Statement stmt = Database.database.createStatement();
+            // String userEmail = Final.login_ScreenFinalController.getLoggedInEmail();
+            ResultSet result = stmt.executeQuery("SELECT name FROM driver where emailaddress = '"+login_ScreenFinalController.getLoggedInEmail()+"';");
+            System.out.println(result.getString(1));
+            name1.setText(result.getString(1));
+            Database.closeConnection();
+        } catch (SQLException e) {
+        }
+    }
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
     }
-    
+
+    public void inputValue(ActionEvent even) throws SQLException {
+        PreparedStatement stmt1 = Database.database.prepareStatement("SELECT name FROM driver where emailaddress = '"+login_ScreenFinalController.getLoggedInEmail()+"';");
+        name1 = (Text) stmt1.executeQuery();
+    }
+
     public void goToFavourites(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
@@ -84,6 +103,7 @@ public class MyProfileDriverFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
     public void goToTripHistory(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
@@ -94,7 +114,8 @@ public class MyProfileDriverFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-     public void goToFaqs(ActionEvent even) throws IOException {
+
+    public void goToFaqs(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
 
@@ -104,7 +125,8 @@ public class MyProfileDriverFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-      public void goToContactUs(ActionEvent event) throws IOException {
+
+    public void goToContactUs(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
 
@@ -114,7 +136,8 @@ public class MyProfileDriverFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-       public void goToLoginPage(ActionEvent event) throws IOException {
+
+    public void goToLoginPage(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
 
@@ -123,9 +146,10 @@ public class MyProfileDriverFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-}
-       public void goToNextPage (ActionEvent event) throws IOException {
-           Stage stage;
+    }
+
+    public void goToNextPage(ActionEvent event) throws IOException {
+        Stage stage;
         Parent root;
 
         stage = (Stage) next.getScene().getWindow();
@@ -133,5 +157,5 @@ public class MyProfileDriverFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-       }
+    }
 }

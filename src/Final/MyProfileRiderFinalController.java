@@ -5,9 +5,15 @@
  */
 package Final;
 
+import static Final.RegoFormRiderFinalController.userIdentifier;
+import assignment.database.Database;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,12 +52,14 @@ public class MyProfileRiderFinalController implements Initializable {
     public TextField name;
     @FXML
     public TextField mobilePhoneNumber;
+    @FXML
     public TextField nameonCard;
     @FXML
     public TextField cardNumber;
+    @FXML
     public TextField CVV;
     @FXML
-    public DatePicker expiryDate;
+    public TextField expiryDate;
     @FXML
     public Label emailAddress;
     @FXML
@@ -60,8 +68,11 @@ public class MyProfileRiderFinalController implements Initializable {
     public Button tripHistory;
     @FXML
     public Button favourites;
+    @FXML
     public TextField licenseNumber;
+    @FXML
     public TextField bsb;
+    @FXML
     public TextField accountNumber;
     @FXML
     private TextField nameOnCard;
@@ -76,11 +87,8 @@ public class MyProfileRiderFinalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
     }
+
     //MENU
     @FXML
     public void goToFavourites(ActionEvent even) throws IOException {
@@ -93,8 +101,14 @@ public class MyProfileRiderFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    
     @FXML
-      public void goToTripHistory(ActionEvent even) throws IOException {
+    public void handleButtonAction(ActionEvent event){
+        
+    }
+
+    @FXML
+    public void goToTripHistory(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
 
@@ -104,8 +118,9 @@ public class MyProfileRiderFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
-     public void goToFaqs(ActionEvent even) throws IOException {
+    public void goToFaqs(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
 
@@ -115,8 +130,9 @@ public class MyProfileRiderFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
-      public void goToContactUs(ActionEvent event) throws IOException {
+    public void goToContactUs(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
 
@@ -126,8 +142,9 @@ public class MyProfileRiderFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
     @FXML
-       public void goToLoginPage(ActionEvent even) throws IOException {
+    public void goToLoginPage(ActionEvent even) throws IOException {
         Stage stage;
         Parent root;
 
@@ -136,5 +153,39 @@ public class MyProfileRiderFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-}
+    }
+
+    public void updateMyProfileRider(String name, String mobilePhoneNumber, String nameOnCard, String cardNumber, String cvv, String expiryDate) throws SQLException {
+        try {
+            Database.openConnection();
+            PreparedStatement stmt = Database.database.prepareStatement("UPDATE RIDER SET name = ?, mobilePhoneNumber = ?, nameOnCard = ?, cardNumber = ?, cvv = ?, expiryDate = ? WHERE emailaddress = ?");
+            stmt.setString(1, name);
+            stmt.setString(2, mobilePhoneNumber);
+            stmt.setString(3, nameOnCard);
+            stmt.setString(4, cardNumber);
+            stmt.setString(5, cvv);
+            stmt.setString(6, expiryDate);
+            stmt.setString(7, login_ScreenFinalController.getLoggedInEmail());
+            stmt.executeUpdate();
+            Database.closeConnection();
+        } catch (SQLException ex) {
+            Logger.getLogger(RegoFormRiderFinalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    public void update(ActionEvent event) throws IOException, SQLException {
+        //Runs the update method for the My Profile Page (Rider Module)
+        updateMyProfileRider(name.getText(), mobilePhoneNumber.getText(), nameOnCard.getText(), cardNumber.getText(), cvv.getText(), expiryDate.getText());
+        //Sets the Scene to the new page
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) update.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("MyProfileRiderFinal.fxml")); //Reloads the same page with the newly updated data
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
+        stage.show();
+    }
 }

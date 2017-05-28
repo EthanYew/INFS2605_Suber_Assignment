@@ -5,6 +5,8 @@
  */
 package Final.finalAdditions;
 
+import Final.Final;
+import Final.login_ScreenFinalController;
 import assignment.GMapsFX.*;
 import assignment.database.Database;
 import assignment.view.RegoFormRiderController;
@@ -119,7 +121,7 @@ public class RiderLandingPageMap implements Initializable, MapComponentInitializ
             Database.openConnection();
             Statement stmt = Database.database.createStatement();
            // String userEmail = Final.login_ScreenFinalController.getLoggedInEmail();
-            ResultSet result = stmt.executeQuery("SELECT name FROM driver where password = 'victorzhang';");
+            ResultSet result = stmt.executeQuery("SELECT name FROM rider where emailaddress = '"+login_ScreenFinalController.getLoggedInEmail()+"';");
             if(result.next()){
             System.out.println(result.getString(1));
             name1.setText(result.getString(1));
@@ -353,7 +355,7 @@ public class RiderLandingPageMap implements Initializable, MapComponentInitializ
         Parent root;
 
         stage = (Stage) signOut.getScene().getWindow();
-        root = FXMLLoader.load(getClass().getResource("loginScreenFinal.fxml"));
+        root = FXMLLoader.load(getClass().getResource("/Final/loginScreenFinal.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

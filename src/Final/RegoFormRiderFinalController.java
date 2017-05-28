@@ -38,13 +38,14 @@ public class RegoFormRiderFinalController implements Initializable {
     @FXML
     public Button addBankingDetails;
     @FXML
-    public static TextField name;
+    public TextField name;
     @FXML
-    public static TextField emailAddress;
+    public TextField emailAddress;
     @FXML
     public TextField password;
     @FXML
     public TextField mobilePhoneNumber;
+    public static String userIdentifier;
 
     /**
      * Initializes the controller class.
@@ -60,8 +61,14 @@ public class RegoFormRiderFinalController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void goToBankDetails() throws IOException {
-     Stage stage;
+    
+    public static String getUserIdentifier(){
+        return userIdentifier;
+    }
+    
+    public void goToBankDetails() throws IOException, SQLException{
+        createAccountRider(name.getText(), emailAddress.getText(), password.getText(), mobilePhoneNumber.getText());
+        Stage stage;
         Parent root;
 
         stage = (Stage) addBankingDetails.getScene().getWindow();
@@ -69,6 +76,26 @@ public class RegoFormRiderFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    
+    public void createAccountRider(String name, String emailAddress, String password, String mobilePhoneNumber) throws SQLException{
+        System.out.println("we here");
+        try{
+        Database.openConnection();
+        PreparedStatement stmt = Database.database.prepareStatement("INSERT INTO RIDER (name, emailAddress, password, mobilePhoneNumber) VALUES (?, ?, ?, ?)");
+        stmt.setString(1, name);
+        stmt.setString(2, emailAddress);
+        stmt.setString(3, password);
+        stmt.setString(4, mobilePhoneNumber);
+        stmt.executeUpdate();
+        Database.closeConnection();
+        userIdentifier = emailAddress;
+    }
+        catch(SQLException ex) {
+            Logger.getLogger(RegoFormRiderFinalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        System.out.println("we in the clear");
     }
     
     @Override
@@ -144,12 +171,11 @@ public class RegoFormRiderFinalController implements Initializable {
 //        stmt.setString(6, RegoFormRiderController.contactNumber.toString());
 
           //assignment.database.Database.database.setAutoCommit(true);
+          Database.closeConnection();
 
-        } catch (SQLException ex) {
-            Logger.getLogger(RegoFormRiderFinalController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        finally {
-            Database.closeConnection();
+        catch (SQLException ex) {
+            Logger.getLogger(RegoFormRiderFinalController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

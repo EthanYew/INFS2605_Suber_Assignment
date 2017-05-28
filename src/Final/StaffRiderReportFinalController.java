@@ -21,16 +21,16 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Ajay Matta
+ * @author AriSurfacePro
  */
 public class StaffRiderReportFinalController implements Initializable {
 
     @FXML
-    public TableView<?> riderReport;
+    private TableView<?> riderReport;
     @FXML
-    public Button refresh;
+    private Button refresh;
     @FXML
-    public Button backToDashboard;
+    private Button backToDashboard;
 
     /**
      * Initializes the controller class.
@@ -43,8 +43,10 @@ public class StaffRiderReportFinalController implements Initializable {
     @FXML
     private void refresh(ActionEvent event) {
     }
-    public void goBackToLandingPage (ActionEvent event) throws IOException {
-    Stage stage;
+    
+    @FXML
+    private void backToDashboard(ActionEvent event) throws IOException{
+        Stage stage;
         Parent root;
 
         stage = (Stage) backToDashboard.getScene().getWindow();
@@ -52,5 +54,5 @@ public class StaffRiderReportFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-}
+    }
 }

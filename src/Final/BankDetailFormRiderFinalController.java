@@ -5,9 +5,14 @@
  */
 package Final;
 
+import assignment.database.Database;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -47,7 +52,16 @@ public class BankDetailFormRiderFinalController implements Initializable {
     }    
 
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void handleButtonAction(ActionEvent event) throws IOException, SQLException {
+        createAccountRiderBank(nameOnCard.getText(), cardNumber.getText(), cvv.getText(), expiryDate.getText());
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) returnToLogin.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("loginScreenFinal.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show(); 
     }
     
     public void goToLoginPage() throws IOException {
@@ -59,5 +73,23 @@ public class BankDetailFormRiderFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    
+    public void createAccountRiderBank(String nameOnCard, String cardNumber, String CVV, String expiryDate) throws SQLException{
+        try{
+        Database.openConnection();
+        PreparedStatement stmt = Database.database.prepareStatement("UPDATE RIDER "
+                + "SET nameOnCard = ?, cardNumber = ?, CVV = ?, expiryDate = ? WHERE emailaddress = ?");
+        stmt.setString(1, nameOnCard);
+        stmt.setString(2, cardNumber);
+        stmt.setString(3, CVV);
+        stmt.setString(4, expiryDate);
+        stmt.setString(5, RegoFormRiderFinalController.getUserIdentifier());
+        stmt.executeUpdate();
+        Database.closeConnection();
+    }
+        catch(SQLException ex) {
+            Logger.getLogger(RegoFormRiderFinalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

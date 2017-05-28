@@ -31,16 +31,17 @@
             <Font name="System Bold" size="37.0" />
          </font>
       </Text>
-      <Button fx:id="addCarDetails" layoutX="166.0" layoutY="303.0" mnemonicParsing="false" onAction="#goToCarDetails" prefHeight="46.0" prefWidth="293.0" style="-fx-background-color: BLACK;" text="ADD CAR DETAILS" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="addCarDetails" layoutX="166.0" layoutY="303.0" mnemonicParsing="false" onAction="#addCarDetails" prefHeight="46.0" prefWidth="293.0" style="-fx-background-color: BLACK;" text="ADD CAR DETAILS" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="name" layoutX="98.0" layoutY="88.0" prefHeight="25.0" prefWidth="428.0" promptText="Full Name" />
-      <TextField fx:id="emailAddress" layoutX="98.0" layoutY="134.0" prefHeight="25.0" prefWidth="267.0" promptText="Email Address " />
+      <TextField fx:id="name" layoutX="98.0" layoutY="88.0" prefHeight="25.0" prefWidth="428.0" promptText="Name" />
+      <TextField fx:id="age" layoutX="98.0" layoutY="130.0" prefHeight="25.0" prefWidth="193.0" promptText="Age" />
+      <TextField fx:id="emailAddress" layoutX="98.0" layoutY="172.0" prefHeight="25.0" prefWidth="267.0" promptText="Email Address " />
       <TextField fx:id="bsb" layoutX="98.0" layoutY="259.0" prefHeight="25.0" prefWidth="205.0" promptText="BSB" />
-      <TextField fx:id="password" layoutX="98.0" layoutY="177.0" prefHeight="25.0" prefWidth="205.0" promptText="Password" />
-      <TextField fx:id="mobilePhoneNumber" layoutX="98.0" layoutY="218.0" prefHeight="25.0" prefWidth="205.0" promptText="Mobile Number" />
+      <TextField fx:id="password" layoutX="98.0" layoutY="215.0" prefHeight="25.0" prefWidth="205.0" promptText="Password" />
+      <TextField fx:id="mobilePhoneNumber" layoutX="335.0" layoutY="215.0" prefHeight="25.0" prefWidth="205.0" promptText="Mobile Number" />
       <TextField fx:id="accountNumber" layoutX="335.0" layoutY="259.0" prefHeight="25.0" prefWidth="205.0" promptText="Account Number" />
    </children>
 </AnchorPane>

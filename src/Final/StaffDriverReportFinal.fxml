@@ -25,6 +25,6 @@
       </Text>
       <TableView fx:id="driverReport" layoutX="34.0" layoutY="73.0" prefHeight="297.0" prefWidth="533.0" />
       <Button fx:id="refresh" layoutX="422.0" layoutY="384.0" mnemonicParsing="false" onAction="#refresh" prefHeight="31.0" prefWidth="141.0" text="Refresh" />
-      <Button fx:id="backToDashboard" layoutX="38.0" layoutY="384.0" mnemonicParsing="false" onAction="#goBackToLandingPage" prefHeight="31.0" prefWidth="141.0" text="Back to Dashboard" />
+      <Button fx:id="backToDashboard" layoutX="38.0" layoutY="384.0" mnemonicParsing="false" onAction="#backToDashboard" prefHeight="31.0" prefWidth="141.0" text="Back to Dashboard" />
    </children>
 </AnchorPane>

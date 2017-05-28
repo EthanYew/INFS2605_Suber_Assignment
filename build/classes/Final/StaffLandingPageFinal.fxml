@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.StaffLandingPageController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Final.StaffLandingPageFinalController">
    <children>
       <ImageView fitHeight="444.0" fitWidth="600.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -18,22 +18,32 @@
       <AnchorPane prefHeight="444.0" prefWidth="249.0" style="-fx-background-color: WHITE;">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="328.0" layoutY="116.0" stroke="BLACK" strokeType="INSIDE" width="249.0" />
-            <Button fx:id="myProfile" layoutX="11.0" layoutY="161.0" mnemonicParsing="false" onAction="#goToMyProfile" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="My Profile" textFill="WHITE">
+            <Button fx:id="favourites" layoutX="14.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Favourites" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="faqs" layoutX="19.0" layoutY="228.0" mnemonicParsing="false" onAction="#goToFaqs" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+            <Button fx:id="tripHistory" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Trip History " textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="contactUs" layoutX="15.0" layoutY="292.0" mnemonicParsing="false" onAction="#goToContactUs" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+            <Button fx:id="myProfile" layoutX="9.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="My Profile" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="signOut" layoutX="11.0" layoutY="357.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign Out" textFill="WHITE">
+            <Button fx:id="faqs" layoutX="15.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: BLACK;" text="FAQS" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="contactUs" layoutX="11.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: BLACK;" text="Contact Us" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="signOut" layoutX="10.0" layoutY="376.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="111.0" style="-fx-background-color: BLACK;" text="Sign Out" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -46,18 +56,18 @@
          </children>
       </AnchorPane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000094" height="408.0" layoutX="279.0" layoutY="18.0" stroke="#c9c9c99e" strokeType="INSIDE" width="301.0" />
-      <Button fx:id="viewCorporateRider" layoutX="296.0" layoutY="91.0" mnemonicParsing="false" onAction="#goToViewCorporateRider" text="View Corporate Rider" />
+      <Button fx:id="editCorporateMember" layoutX="296.0" layoutY="91.0" mnemonicParsing="false" onAction="#getCorporateRiderReport" text="Edit Corporate Rider" />
       <Label alignment="CENTER" layoutX="310.0" layoutY="33.0" prefHeight="25.0" prefWidth="243.0" text="STAFF DASHBOARD" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="addStaffAccount" layoutX="296.0" layoutY="337.0" mnemonicParsing="false" onAction="#goToAddStaffAccount" text="Add Staff Account" />
-      <Button fx:id="addCorporateRider" layoutX="296.0" layoutY="377.0" mnemonicParsing="false" onAction="#goToAddCorporateRider" text="Add Corporate Rider" />
-      <Button fx:id="viewStaff" layoutX="296.0" layoutY="132.0" mnemonicParsing="false" onAction="#goToViewStaff" text="View Staff " />
-      <Button fx:id="viewDriver" layoutX="296.0" layoutY="173.0" mnemonicParsing="false" onAction="#goToViewDriver" text="View Driver" />
-      <Button fx:id="viewRider" layoutX="296.0" layoutY="217.0" mnemonicParsing="false" onAction="#goToViewRider" text="View Rider" />
-      <Button fx:id="addPotentialCorporation" layoutX="296.0" layoutY="299.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Add Potential Corporation" />
-      <Button fx:id="generateMailingList" layoutX="296.0" layoutY="258.0" mnemonicParsing="false" onAction="#goToGenerateMailingList" text="Generate Mailing List" />
+      <Button fx:id="addStaffAccount" layoutX="296.0" layoutY="337.0" mnemonicParsing="false" text="Add Staff Account" />
+      <Button fx:id="addCorporateMember" layoutX="296.0" layoutY="377.0" mnemonicParsing="false" text="Add Corporate Rider" />
+      <Button fx:id="editStaffAccount" layoutX="296.0" layoutY="132.0" mnemonicParsing="false" onAction="#getStaffReport" text="Edit Staff Account" />
+      <Button fx:id="editDriver" layoutX="296.0" layoutY="173.0" mnemonicParsing="false" onAction="#getDriverReport" text="Edit Driver" />
+      <Button fx:id="editRider" layoutX="296.0" layoutY="217.0" mnemonicParsing="false" onAction="#getRiderReport" text="Edit Rider" />
+      <Button fx:id="addPotentialCustomers" layoutX="296.0" layoutY="299.0" mnemonicParsing="false" text="Add Potential Customer" />
+      <Button fx:id="generateMailingList" layoutX="296.0" layoutY="258.0" mnemonicParsing="false" text="Generate Mailing List" />
    </children>
 </AnchorPane>

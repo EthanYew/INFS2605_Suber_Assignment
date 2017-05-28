@@ -21,7 +21,7 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Ajay Matta
+ * @author AriSurfacePro
  */
 public class StaffStaffReportFinalController implements Initializable {
 
@@ -43,8 +43,10 @@ public class StaffStaffReportFinalController implements Initializable {
     @FXML
     private void refresh(ActionEvent event) {
     }
-    public void goBackToLandingPage (ActionEvent event) throws IOException {
-    Stage stage;
+    
+    @FXML
+    private void backToDashboard(ActionEvent event) throws IOException{
+        Stage stage;
         Parent root;
 
         stage = (Stage) backToDashboard.getScene().getWindow();
@@ -52,5 +54,6 @@ public class StaffStaffReportFinalController implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-}
+    }
+    
 }
